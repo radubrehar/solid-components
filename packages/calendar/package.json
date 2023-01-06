@@ -1,0 +1,28 @@
+{
+  "name": "@rb/solid-calendar",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "workspaces": [
+    "next-app",
+    "solid-app"
+  ],
+  "typings": "dist/index.d.ts",
+  "main": "src/index.tsx",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "watch:build": "vite build -w",
+    "watch:tsup": "tsup src/index.tsx --dts-only --watch --outDir=dist",
+    "watch": "run-p watch:*",
+    "serve": "vite preview",
+    "tsc": "tsc --project tsconfig.json",
+    "xwatch:tsc": "tsc --watch --project tsconfig.json",
+    "tsup": "tsup src/index.tsx --dts-only --outDir=dist"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "solid-js": "^1.6.6"
+  }
+}
